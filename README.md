@@ -14,7 +14,7 @@ Movie spider from http://www.80s.tw/ &amp; Web Server to show movie list.
 ##### 3.Web Server
  1) 支持get,post请求
  2) express.router 路由控制
- 3)ejs模板
+ 3) ejs模板
 
 ##启动服务：
 ```
