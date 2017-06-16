@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>电影列表</title>
+    <!-- Bootstrap -->
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/css/base.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="app" class="container-fluid">
+    <div id="movieList" class="col-sm-8 col-sm-offset-2">
+        <% movies.forEach(function(_movie,index){ %>
+            <div class="movieInfo col-xs-4 col-sm-3 col-lg-2">
+                <img src="<%= _movie.img %>" alt="">
+                <a href="<%= _movie.downloadUrl %>"><%= _movie.name %></a>
+            </div>
+        <%})%>
+        <ul class="pagination clearfix" id="pagination">
+            <% for(var i=1;i<=totalPages;i++){ %>
+                <li><a href="/list/<%= i %>"><%= i %></a></li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>

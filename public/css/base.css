@@ -1,0 +1,6 @@
+#movieList {margin-top:20px}
+#movieList table td {word-break: break-all}
+#movieList .movieInfo {overflow:hidden;padding:0 15px 15px}
+#movieList .movieInfo img {width:100%}
+#movieList .movieInfo a {width:100%;overflow: hidden;text-overflow: ellipsis;display: block;height:20px;line-height:20px}
+#movieList .pagination {width:100%}
