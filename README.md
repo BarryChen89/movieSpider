@@ -29,4 +29,7 @@ node index.js watch 3000
 ##登录
 ```
 访问http://localhost:3000 or http://localhost:3000/login
+账号:cwq
+密码:123456
+输入其他无效 会刷新url
 ```
